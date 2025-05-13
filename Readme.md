@@ -6,64 +6,51 @@ DiscrimText is a novel approach for detecting machine-generated text (MGT) produ
 - **Performance**: Measures the accuracy of text-completion models on the text.
 - **Perturbation Discrepancy**: Evaluates the sensitivity of the text to minor perturbations.
 
-This repository contains the implementation of the DiscrimText framework, which combines these features into a machine learning model for classifying text as either human-generated or machine-generated.
+# Contamination Detection of Textual Data with Natural-DaCoDe
 
-## Features
-
-- **Naturalness Calculation**: Based on n-gram and cache models to quantify text predictability.
-- **Performance Assessment**: Uses token-level accuracy from text-completion models.
-- **Perturbation Discrepancy**: Measures the change in log probability when the text is perturbed.
-
-## Installation
-
-### Prerequisites
-
-- Python 3.7 or later
-- pip
-- scikit-learn
-- numpy
-- pandas
-
-### Steps to Install
-
-1. Clone the repository:
-
-    ```bash
-    git clone https://github.com/yourusername/discrimtext.git
-    cd discrimtext
-    ```
-
-2. Create a virtual environment:
-
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # For Linux/MacOS
-    venv\Scripts\activate     # For Windows
-    ```
-
-3. Install required dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-## Usage
-
-### Data Preparation
-
-Before using the model, you'll need a dataset containing both human-generated text (HGT) and machine-generated text (MGT). You can use publicly available datasets or generate your own by running a language model like ChatGPT or Claude. The datasets should be balanced with equal samples of HGT and MGT.
-
-### Feature Computation
-
-DiscrimText uses three features to train the classifier:
-
-1. **Naturalness**: Compute the naturalness of the text using a blend of global n-gram and local cache models.
-2. **Performance**: Measure the token-level accuracy of a standard text-completion model (e.g., GPT-3).
-3. **Perturbation Discrepancy**: Calculate the log probability difference between the original and perturbed versions of the text.
-
-### Training the Classifier
-
-Once the features are computed, you can train the Support Vector Machine (SVM) classifier:
+This repository contains instructions on how to classify contaminated data with **DiscrimText**, including how to access the dataset.
+ 
+### 1. `Downloading the Datasets`
 
 ```bash
-python train.py --train_data <path_to_training_data>
+python Data_download.py --output_folder <path_to_output_folder>
+```
+### 2. `Downloading the Datasets`
+Download the N-gram text data to train the N-gram model using this link: [N-gram Text Data](https://drive.google.com/file/d/1huji6_lry_cjpNXC1nnYlO8tHQOHh5u5/view?usp=sharing)
+
+
+### 3. `Train Dataset (for N-gram Model)`
+This folder contains the data used to train the n-gram model. It includes various text files:
+
+- Example files: `file1.txt`, `file2.txt`, etc.
+To train the N-gram model, you can use the code provided in the [Ngram Model](https://github.com/naturalnessbasedappraoch/Natural-DaCode/tree/main/Source_code/n-gram_cachelm) repository. Follow the instructions in the repository to preprocess the data and train the model.
+
+### 4. `Test Dataset (for Text Completion )`
+
+The folder you download from script contains the test datasets for **ChatGPT3.5**. The test data is split into two categories:
+
+- **Human_Constructed_Text**:
+    - It contains text files.
+    - Example files: `file1.txt`, `file2.txt`, etc.
+  
+
+
+## Steps for Machine Generated Text Detection
+
+### 1. **Naturalness, Prediction Accuracy and Perturbation Dicrepancy Computing**
+   - **Naturalness:** Evaluate the naturalness scores for these text snippets using the N-gram model.
+   - **Prediction Accuracy:** Calculate the token-level accuracy from text Generation Models(ChatGPT3.5 and Claude2).
+
+### 2. **Train the Classifier**
+    - Combine performance metrics and naturalness scores.
+    - Train an SVM classifier to distinguish between contaminated and cleaned data.
+
+### 3. **Predict Contamination Source**
+-Use the trained SVM classifier to predict whether a text is contaminated (CTdata) or cleaned (CLdata).
+
+### 4. **Usage**
+To perform contamination detection use the following scripts available in the repository:
+
+   ```bash
+   python Classifier.py --datasets_dir path_to_your_datasets_folder
+```
