@@ -6,7 +6,7 @@ DiscrimText is a novel approach for detecting machine-generated text (MGT) produ
 - **Prediction Accuracy**: Measures the Prediction Accuracy of text-completion models on the text.
 - **Perturbation Discrepancy**: Evaluates the sensitivity of the text to minor perturbations.
 
-# Contamination Detection of Textual Data with Natural-DaCoDe
+## Machine-generated Text detection with DiscrimText
 
 This repository contains instructions on how to classify contaminated data with **DiscrimText**, including how to access the dataset.
  
@@ -44,13 +44,13 @@ The folder you download from script contains the test datasets for **ChatGPT3.5*
 
 ### 2. **Train the Classifier**
     - Combine performance metrics and naturalness scores.
-    - Train an SVM classifier to distinguish between contaminated and cleaned data.
+    - Train an SVM classifier to distinguish between HCT and MGT.
 
-### 3. **Predict Contamination Source**
--Use the trained SVM classifier to predict whether a text is contaminated (CTdata) or cleaned (CLdata).
+### 3. **Predict Data Source**
+-Use the trained SVM classifier to predict whether a text is HCT or MGT.
 
 ### 4. **Usage**
-To perform contamination detection use the following scripts available in the repository:
+To perform MGT detection use the following scripts available in the repository:
 
    ```bash
    python Classifier.py --datasets_dir path_to_your_datasets_folder
