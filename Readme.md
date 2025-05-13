@@ -3,7 +3,7 @@
 DiscrimText is a novel approach for detecting machine-generated text (MGT) produced by large language models (LLMs) like ChatGPT, Claude, and others. Unlike traditional detection methods that rely on isolated linguistic features or simple probabilistic metrics, DiscrimText integrates three key features to improve detection performance:
 
 - **Naturalness**: Quantifies the linguistic predictability of the text.
-- **Performance**: Measures the accuracy of text-completion models on the text.
+- **Prediction Accuracy**: Measures the Prediction Accuracy of text-completion models on the text.
 - **Perturbation Discrepancy**: Evaluates the sensitivity of the text to minor perturbations.
 
 # Contamination Detection of Textual Data with Natural-DaCoDe
@@ -40,6 +40,7 @@ The folder you download from script contains the test datasets for **ChatGPT3.5*
 ### 1. **Naturalness, Prediction Accuracy and Perturbation Dicrepancy Computing**
    - **Naturalness:** Evaluate the naturalness scores for these text snippets using the N-gram model.
    - **Prediction Accuracy:** Calculate the token-level accuracy from text Generation Models(ChatGPT3.5 and Claude2).
+   - **Perturbation Discrepancy:**Compute the difference of Log probability before and after the perturbation of text.
 
 ### 2. **Train the Classifier**
     - Combine performance metrics and naturalness scores.
