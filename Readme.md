@@ -1,5 +1,8 @@
 # DiscrimText: A Multi-Feature Framework for Enhanced Detection of Machine-Generated Text
 
+![Overview](Overview.PNG)
+
+
 DiscrimText is a novel approach for detecting machine-generated text (MGT) produced by large language models (LLMs) like ChatGPT, Claude, and others. Unlike traditional detection methods that rely on isolated linguistic features or simple probabilistic metrics, DiscrimText integrates three key features to improve detection performance:
 
 - **Naturalness**: Quantifies the linguistic predictability of the text.
