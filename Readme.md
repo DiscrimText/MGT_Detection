@@ -46,7 +46,7 @@ The folder you download from script contains the test datasets for **ChatGPT3.5*
 ### 1. **Naturalness, Prediction Accuracy and Perturbation Dicrepancy Computing**
    - **Naturalness:** Evaluate the naturalness scores for these text snippets using the N-gram model.
    - **Prediction Accuracy:** Calculate the token-level accuracy from text Generation Models(ChatGPT3.5 and Claude2).
-   - **Perturbation Discrepancy:**Compute the difference of Log probability before and after the perturbation of text.
+   - **Perturbation Discrepancy:** Compute the difference of Log probability before and after the perturbation of text.
 
 ### 2. **Train the Classifier**
     - Combine performance metrics and naturalness scores.
