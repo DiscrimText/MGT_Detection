@@ -29,9 +29,15 @@ To train the N-gram model, you can use the code provided in the [Ngram Model](ht
 
 The folder you download from script contains the test datasets for **ChatGPT3.5**. The test data is split into two categories:
 
-- **Human_Constructed_Text**:
+- **Human-Constructed_Text**:
     - It contains text files.
     - Example files: `file1.txt`, `file2.txt`, etc.
+- **Machine-Constructed_text**:
+    - **Summarize Text**:
+      - The text is passed through **Gemini** and **DeepSeek** models to generate a summary.
+    - **Generate Text from Summary**:
+      - After obtaining the summaries, we send these summaries back to the **Gemini** and **DeepSeek** models to generate a more readable and detailed version of the summary.
+
   
 
 
