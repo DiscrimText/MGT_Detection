@@ -12,8 +12,20 @@ DiscrimText is a novel approach for detecting machine-generated text (MGT) produ
 ## Machine-generated Text detection with DiscrimText
 
 This repository contains instructions on how to classify Machine generated text with **DiscrimText**, including how to access the dataset.
- 
-### 1. `Downloading the Datasets`
+  
+### 1. `Downloading the n-gram training Datasets`
+Download the N-gram text data to train the N-gram model using this link: [N-gram Text Data](https://drive.google.com/file/d/14HJJzGIT5aQDSpQ6l96k1iYUdDZIEe5R/view?usp=sharing)
+```bash
+python ngram_dataset.py --output_folder <path_to_output_folder>
+```
+
+### 2. `Training N-gram model`
+This folder contains the data used to train the n-gram model. It includes various text files:
+
+- Example files: `file1.txt`, `file2.txt`, etc.
+To train the N-gram model, you can use the code provided in the [Ngram Model](https://github.com/DiscrimText/MGT_Detection/tree/main/Source_code/n-gram_chachelm) repository. Follow the instructions in the repository to preprocess the data and train the model.
+
+### 4. `Downloading the Datasets`
 
 ```bash
 python Data_download.py --output_folder <path_to_output_folder>
@@ -31,22 +43,7 @@ Test Dataset (for text Completion Models)
         └── ...
 ```
 
-
-   
-### 2. `Downloading the n-gram training Datasets`
-Download the N-gram text data to train the N-gram model using this link: [N-gram Text Data](https://drive.google.com/file/d/14HJJzGIT5aQDSpQ6l96k1iYUdDZIEe5R/view?usp=sharing)
-```bash
-python ngram_dataset.py --output_folder <path_to_output_folder>
-```
-
-
-### 3. `Train Dataset (for N-gram Model)`
-This folder contains the data used to train the n-gram model. It includes various text files:
-
-- Example files: `file1.txt`, `file2.txt`, etc.
-To train the N-gram model, you can use the code provided in the [Ngram Model](https://github.com/DiscrimText/MGT_Detection/tree/main/Source_code/n-gram_chachelm) repository. Follow the instructions in the repository to preprocess the data and train the model.
-
-### 4. `Test Dataset (for Text Completion )`
+### 3. `Test Dataset (for Text Completion )`
 
 The folder you download from script contains the test datasets for **ChatGPT3.5**. The test data is split into two categories:
 
@@ -58,9 +55,6 @@ The folder you download from script contains the test datasets for **ChatGPT3.5*
       - The text is passed through **Gemini** and **DeepSeek** models to generate a summary.
     - **Generate Text from Summary**:
       - After obtaining the summaries, we send these summaries back to the **Gemini** and **DeepSeek** models to generate a more readable and detailed version of the summary.
-
-  
-
 
 ## Steps for Machine Generated Text Detection
 
