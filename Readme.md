@@ -64,21 +64,18 @@ The folder you download from script contains the test datasets for **ChatGPT3.5*
 
 ## Steps for Machine Generated Text Detection
 
-### 1. **Naturalness, Prediction Accuracy and Perturbation Dicrepancy Computing**
+### 1. **Naturalness, Prediction Accuracy and Perturbation Discrepancy Computing**
    - **Naturalness:** Evaluate the naturalness scores for these text snippets using the N-gram model.
    - **Prediction Accuracy:** Calculate the token-level accuracy from text Generation Models(ChatGPT3.5 and Claude2).
    - **Perturbation Discrepancy:** Compute the difference of Log probability before and after the perturbation of text.
 
 ### 2. **Train the Classifier**
-    - Combine performance metrics and naturalness scores.
+    - Combine performance metrics and naturalness scores and perturbation discrepency metric.
     - Train an SVM classifier to distinguish between HCT and MGT.
-
-### 3. **Predict Data Source**
--Use the trained SVM classifier to predict whether a text is HCT or MGT.
-
-### 4. **Usage**
-To perform MGT detection use the following scripts available in the repository:
+To perform machine generated text detection use the following scripts available in the repository:
 
    ```bash
-   python Classifier.py --datasets_dir path_to_your_datasets_folder
-```
+   python Classifier_performance.py --datasets_dir path_to_your_datasets_folder
+Replace path_to_your_datasets_folder with the actual path to your datasets folder containing performance and naturalness scores.
+
+
