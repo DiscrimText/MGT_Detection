@@ -3,7 +3,7 @@
 ![Framework_overview](DiscrimText_Overview.PNG)
 
 
-DiscrimText is a novel approach for detecting machine-generated text (MGT) produced by large language models (LLMs) like ChatGPT, Claude, and others. Unlike traditional detection methods that rely on isolated linguistic features or simple probabilistic metrics, DiscrimText integrates three key features to improve detection performance:
+DiscrimText is a novel approach for detecting machine-generated text (MGT) produced by large language models (LLMs) like ChatGPT, Claude. Unlike traditional detection methods that rely on isolated linguistic features or simple probabilistic metrics, DiscrimText integrates three key features to improve detection performance:
 
 - **Naturalness**: Quantifies the linguistic predictability of the text.
 - **Prediction Accuracy**: Measures the Prediction Accuracy of text-completion models on the text.
@@ -11,7 +11,7 @@ DiscrimText is a novel approach for detecting machine-generated text (MGT) produ
 
 ## Machine-generated Text detection with DiscrimText
 
-This repository contains instructions on how to classify contaminated data with **DiscrimText**, including how to access the dataset.
+This repository contains instructions on how to classify Machine generated text with **DiscrimText**, including how to access the dataset.
  
 ### 1. `Downloading the Datasets`
 
@@ -75,7 +75,8 @@ The folder you download from script contains the test datasets for **ChatGPT3.5*
 To perform machine generated text detection use the following scripts available in the repository:
 
    ```bash
-   python Classifier_performance.py --datasets_dir path_to_your_datasets_folder
+   python Classifier.py --datasets_dir path_to_your_datasets_folder
+   ```
 Replace path_to_your_datasets_folder with the actual path to your datasets folder containing performance and naturalness scores.
 
 
