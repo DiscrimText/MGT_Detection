@@ -18,6 +18,19 @@ This repository contains instructions on how to classify contaminated data with 
 ```bash
 python Data_download.py --output_folder <path_to_output_folder>
 ```
+### 1. `Downlsdfsding the Datasets`
+Test Dataset (for Code Completion Models)
+    ├── CLdata
+    │   ├── file1.java
+    │   ├── file2.java
+    │   └── ...
+    └── CTdata
+        ├── file1.java
+        ├── file2.java
+        └── ...
+
+
+   
 ### 2. `Downloading the n-gram training Datasets`
 Download the N-gram text data to train the N-gram model using this link: [N-gram Text Data](https://drive.google.com/file/d/14HJJzGIT5aQDSpQ6l96k1iYUdDZIEe5R/view?usp=sharing)
 ```bash
