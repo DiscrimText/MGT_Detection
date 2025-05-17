@@ -63,7 +63,7 @@ The folder you download from script contains the test datasets for **ChatGPT3.5*
    - **Prediction Accuracy:** Calculate the token-level accuracy from text Generation Models(ChatGPT3.5 and Claude2).
    - **Perturbation Discrepancy:** Compute the difference of Log probability before and after the perturbation of text(ChatGPT3.5 and Claude2).
 
-### 2. **Train the Classifier**
+### 2. **Training and Testing the Classifier**
     - Combine performance metrics and naturalness scores and perturbation discrepency metric.
     - Train an SVM classifier to distinguish between HCT and MGT.
 To perform machine generated text detection use the following scripts available in the repository:
