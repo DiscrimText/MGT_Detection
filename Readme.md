@@ -20,6 +20,9 @@ python Data_download.py --output_folder <path_to_output_folder>
 ```
 ### 2. `Downloading the Datasets`
 Download the N-gram text data to train the N-gram model using this link: [N-gram Text Data](https://drive.google.com/file/d/1huji6_lry_cjpNXC1nnYlO8tHQOHh5u5/view?usp=sharing)
+```bash
+python Data_download.py --output_folder <path_to_output_folder>
+```
 
 
 ### 3. `Train Dataset (for N-gram Model)`
