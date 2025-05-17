@@ -29,7 +29,7 @@ python ngram_dataset.py --output_folder <path_to_output_folder>
 This folder contains the data used to train the n-gram model. It includes various text files:
 
 - Example files: `file1.txt`, `file2.txt`, etc.
-To train the N-gram model, you can use the code provided in the [Ngram Model](https://github.com/naturalnessbasedappraoch/Natural-DaCode/tree/main/Source_code/n-gram_cachelm) repository. Follow the instructions in the repository to preprocess the data and train the model.
+To train the N-gram model, you can use the code provided in the [Ngram Model](https://github.com/DiscrimText/MGT_Detection/tree/main/Source_code/n-gram_chachelm) repository. Follow the instructions in the repository to preprocess the data and train the model.
 
 ### 4. `Test Dataset (for Text Completion )`
 
