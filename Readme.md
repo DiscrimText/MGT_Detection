@@ -18,16 +18,18 @@ This repository contains instructions on how to classify contaminated data with 
 ```bash
 python Data_download.py --output_folder <path_to_output_folder>
 ```
-### 1. `Downlsdfsding the Datasets`
-Test Dataset (for Code Completion Models)
-    ├── CLdata
-    │   ├── file1.java
-    │   ├── file2.java
+#### Data structure
+```plaintext
+Test Dataset (for text Completion Models)
+    ├── Human Constructed Text
+    │   ├── Text1.txt
+    │   ├── Text2.txt
     │   └── ...
-    └── CTdata
-        ├── file1.java
-        ├── file2.java
+    └── Machine Generated Text
+        ├── Text1.txt
+        ├── Text2.txt
         └── ...
+```
 
 
    
