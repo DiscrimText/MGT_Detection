@@ -22,12 +22,12 @@ python Data_download.py --output_folder <path_to_output_folder>
 ```plaintext
 Test Dataset (for text Completion Models)
     ├── Human Constructed Text
-    │   ├── Text1.txt
-    │   ├── Text2.txt
+    │   ├── File1.txt
+    │   ├── File2.txt
     │   └── ...
     └── Machine Generated Text
-        ├── Text1.txt
-        ├── Text2.txt
+        ├── File1.txt
+        ├── File2.txt
         └── ...
 ```
 
